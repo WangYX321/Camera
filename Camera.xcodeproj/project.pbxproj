@@ -10,25 +10,27 @@
 		373EE585B8077AEF9B06A0D9 /* Pods_Camera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFBDEE8222B77DBBB1890DEF /* Pods_Camera.framework */; };
 		497EB9EE1FADA517007784B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EB9ED1FADA517007784B3 /* AppDelegate.swift */; };
 		497EB9F01FADA517007784B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EB9EF1FADA517007784B3 /* ViewController.swift */; };
-		497EB9F31FADA517007784B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EB9F11FADA517007784B3 /* Main.storyboard */; };
 		497EB9F61FADA517007784B3 /* Camera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 497EB9F41FADA517007784B3 /* Camera.xcdatamodeld */; };
 		497EB9F81FADA517007784B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497EB9F71FADA517007784B3 /* Assets.xcassets */; };
 		497EB9FB1FADA517007784B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497EB9F91FADA517007784B3 /* LaunchScreen.storyboard */; };
 		497EBA281FADB326007784B3 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EBA271FADB326007784B3 /* Network.swift */; };
 		497EBA321FADBA2D007784B3 /* CornerMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EBA311FADBA2D007784B3 /* CornerMark.swift */; };
+		497EBA471FAE0D43007784B3 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497EBA461FAE0D43007784B3 /* UploadViewController.swift */; };
+		49BC490E1FAE0EC50047E2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC490C1FAE0EC50047E2F6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		497EB9EA1FADA517007784B3 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		497EB9ED1FADA517007784B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		497EB9EF1FADA517007784B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		497EB9F21FADA517007784B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		497EB9F51FADA517007784B3 /* Camera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Camera.xcdatamodel; sourceTree = "<group>"; };
 		497EB9F71FADA517007784B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		497EB9FA1FADA517007784B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		497EB9FC1FADA517007784B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497EBA271FADB326007784B3 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		497EBA311FADBA2D007784B3 /* CornerMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerMark.swift; sourceTree = "<group>"; };
+		497EBA461FAE0D43007784B3 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		49BC490D1FAE0EC50047E2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96CCCA8ADBAB1FCCC739A138 /* Pods-Camera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.release.xcconfig"; sourceTree = "<group>"; };
 		AF4363F24AE93EAE7224B19C /* Pods-Camera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camera.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camera/Pods-Camera.debug.xcconfig"; sourceTree = "<group>"; };
 		EFBDEE8222B77DBBB1890DEF /* Pods_Camera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,10 +69,11 @@
 		497EB9EC1FADA517007784B3 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				497EBA461FAE0D43007784B3 /* UploadViewController.swift */,
 				497EB9ED1FADA517007784B3 /* AppDelegate.swift */,
 				497EB9EF1FADA517007784B3 /* ViewController.swift */,
-				497EB9F11FADA517007784B3 /* Main.storyboard */,
 				497EB9F71FADA517007784B3 /* Assets.xcassets */,
+				49BC490C1FAE0EC50047E2F6 /* Main.storyboard */,
 				497EB9F91FADA517007784B3 /* LaunchScreen.storyboard */,
 				497EB9FC1FADA517007784B3 /* Info.plist */,
 				497EB9F41FADA517007784B3 /* Camera.xcdatamodeld */,
@@ -159,9 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49BC490E1FAE0EC50047E2F6 /* Main.storyboard in Resources */,
 				497EB9FB1FADA517007784B3 /* LaunchScreen.storyboard in Resources */,
 				497EB9F81FADA517007784B3 /* Assets.xcassets in Resources */,
-				497EB9F31FADA517007784B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				497EB9F01FADA517007784B3 /* ViewController.swift in Sources */,
+				497EBA471FAE0D43007784B3 /* UploadViewController.swift in Sources */,
 				497EBA321FADBA2D007784B3 /* CornerMark.swift in Sources */,
 				497EB9F61FADA517007784B3 /* Camera.xcdatamodeld in Sources */,
 				497EBA281FADB326007784B3 /* Network.swift in Sources */,
@@ -231,20 +235,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		497EB9F11FADA517007784B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				497EB9F21FADA517007784B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		497EB9F91FADA517007784B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				497EB9FA1FADA517007784B3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		49BC490C1FAE0EC50047E2F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49BC490D1FAE0EC50047E2F6 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

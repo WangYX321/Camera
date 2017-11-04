@@ -21,7 +21,7 @@ extension UIImage {
     func addMarkedImage(markText:String, corner:CornerMark = .BottomRight,
                           margin:CGPoint = CGPoint(x: 20, y: 20),
                           markTextColor:UIColor = UIColor.white,
-                          markTextFont:UIFont = UIFont.systemFont(ofSize: 20),
+                          markTextFont:UIFont = UIFont.systemFont(ofSize: 30),
                           backgroundColor:UIColor = UIColor.clear) -> UIImage{
         
         let textAttributes = [NSAttributedStringKey.foregroundColor:markTextColor,

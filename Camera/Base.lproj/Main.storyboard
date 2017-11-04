@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,12 +17,128 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KmF-Cp-znE">
+                                <rect key="frame" x="154" y="560" width="68" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="I2v-TI-H2g"/>
+                                    <constraint firstAttribute="width" constant="68" id="RDS-ss-yJZ"/>
+                                </constraints>
+                                <state key="normal" image="capture"/>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aI1-sZ-zFK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2N9-su-KQk">
+                                <rect key="frame" x="252" y="577" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="O0Q-4o-gmf"/>
+                                    <constraint firstAttribute="width" constant="35" id="irU-0a-s7h"/>
+                                </constraints>
+                                <state key="normal" image="switchCamera"/>
+                                <connections>
+                                    <action selector="switchCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hW2-9S-WI9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KmF-Cp-znE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uf6-bQ-RRt"/>
+                            <constraint firstItem="2N9-su-KQk" firstAttribute="leading" secondItem="KmF-Cp-znE" secondAttribute="trailing" constant="30" id="ahg-I2-iDC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KmF-Cp-znE" secondAttribute="bottom" constant="39" id="neK-EO-6mP"/>
+                            <constraint firstItem="2N9-su-KQk" firstAttribute="centerY" secondItem="KmF-Cp-znE" secondAttribute="centerY" id="zcI-Ya-w7m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="switchCameraBtn" destination="2N9-su-KQk" id="Wld-67-Xmz"/>
+                        <outlet property="takePictureBtn" destination="KmF-Cp-znE" id="KQj-mw-nMc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="108.39580209895054"/>
+        </scene>
+        <!--Upload View Controller-->
+        <scene sceneID="UCp-as-oYK">
+            <objects>
+                <viewController storyboardIdentifier="uploadViewController" id="ZWR-LS-Axl" customClass="UploadViewController" customModule="Camera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PTC-89-jhg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y1d-ma-XGa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKz-pN-x84">
+                                <rect key="frame" x="39" y="20" width="60" height="34"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.90980392156862744" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="kOQ-Yk-Axp"/>
+                                    <constraint firstAttribute="width" constant="60" id="y0N-Xl-Tri"/>
+                                </constraints>
+                                <state key="normal" title="取消">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelAction:" destination="ZWR-LS-Axl" eventType="touchUpInside" id="PdO-sT-wIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-l7-pLu">
+                                <rect key="frame" x="278" y="20" width="60" height="34"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.90980392156862744" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="hqI-bT-pVs"/>
+                                    <constraint firstAttribute="width" constant="60" id="jL9-H6-YS1"/>
+                                </constraints>
+                                <state key="normal" title="上传">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rd7-Xv-ZCs" firstAttribute="trailing" secondItem="wZT-l7-pLu" secondAttribute="trailing" constant="37" id="9gT-KZ-gOq"/>
+                            <constraint firstItem="AKz-pN-x84" firstAttribute="leading" secondItem="Rd7-Xv-ZCs" secondAttribute="leading" constant="39" id="hy8-D6-TCq"/>
+                            <constraint firstItem="AKz-pN-x84" firstAttribute="top" secondItem="Rd7-Xv-ZCs" secondAttribute="top" id="nAS-vM-DJ7"/>
+                            <constraint firstItem="wZT-l7-pLu" firstAttribute="top" secondItem="Rd7-Xv-ZCs" secondAttribute="top" id="z6r-5f-zNn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rd7-Xv-ZCs"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="Y1d-ma-XGa" id="Myv-5e-zen"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCH-um-XE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="108.39580209895054"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="capture" width="68" height="68"/>
+        <image name="switchCamera" width="36" height="30"/>
+    </resources>
 </document>
